@@ -1,22 +1,11 @@
-import math
+class Calculator:
+    calculation_type = "Arithmetic Operations"
 
-class Shape:
-    def area(self):
-        raise NotImplementedError("Subclasses must implement the area method")
+    @staticmethod
+    def add(a, b):
+        return a + b
 
-
-class Rectangle(Shape):
-    def __init__(self, length, width):
-        self.length = length
-        self.width = width
-
-    def area(self):
-        return self.length * self.width
-
-
-class Circle(Shape):
-    def __init__(self, radius):
-        self.radius = radius
-
-    def area(self):
-        return math.pi * self.radius ** 2
+    @classmethod
+    def multiply(cls, a, b):
+        print(f"Calculation type: {cls.calculation_type}")
+        return a * b
